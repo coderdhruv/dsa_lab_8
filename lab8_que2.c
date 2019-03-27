@@ -9,8 +9,7 @@ int main(){
 	int n,i=0;
 	scanf("%d",&n);
 	int visited[n];
-	int arr1[n],proc1[n],ind1[n];	
-	int arr3[n],proc3[n],ind3[n];
+	int arr1[n],proc1[n],ind1[n],arr3[n],proc3[n],ind3[n];	
 	for(i=0;i<n;i++){
 		visited[i]=0;
 		scanf("%d %d",&arr1[i],&proc1[i]);
