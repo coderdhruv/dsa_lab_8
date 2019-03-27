@@ -16,27 +16,18 @@ int find_min(int a[],int l,int r){
 }
 void calc(int a[],int l,int r){
 	int i=0;
-	if(l<r){
-	printf("hi base %d %d\n",l,r);	
-		int y = find_min(a,l,r);
-		printf("y: %d  \n",y);
-		//sum = sum + ((r-y+1)*(y-l))+(r-y);
+	if(l<r){	
+		int y = find_min(a,l,r);		
 		for(i=1;i<=((r-y+1)*(y-l))+(r-y)+1;i++){
 			sum = sum + a[y];
-		}	
-		printf("sum: %d \n",sum);
-		printf("hi left %d %d\n",l,y-1);
+		}
 		calc(a,l,y-1);
-		printf("hi right %d %d\n",y+1,r);
 		calc(a,y+1,r);		
 	}
 	else if(l==r){
 		sum=sum+a[l];
-		printf("sum: %d\n",sum);
 	}
-	
 }
- 
 int main(){
 int n,i=0;
 scanf("%d",&n);

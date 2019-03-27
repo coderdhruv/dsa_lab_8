@@ -23,7 +23,7 @@ int main(){
 	for(i=0;i<n-k+1;i++){
 		while(light[i]!='G'){
 			printf("present value of i :%c\n",light[i]);	
-			for(j=i;j<=min(n-1,i+k-1);j++){
+			for(j=i;j<=min(n-1,i+k);j++){
 				if(light[j] == 'R'){
 					light[j] = 'Y';
 				}
